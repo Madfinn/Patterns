@@ -1,0 +1,62 @@
+//    <section class="house">
+        <!--Popup-->
+        <div class="house__popup" id="houseSlider">
+            <div class="container">
+                <div class="house__popupBlock">
+                    <div class="house__slide single-item interier ">
+                        <img src="img/EvoHouse/interier/1.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/01.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/01 (2).jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/2.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/02.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/03 (1).jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/03.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/020.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/077.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/088.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/099.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/0101.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/0202.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/0303.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/05.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/07.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/08.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/09.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/12.jpg" alt="" class="house__img house__slide single-item">
+                        <img src="img/EvoHouse/interier/13.jpg" alt="" class="house__img house__slide single-item">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End popup-->
+
+//css
+ //popup
+  &__popup {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden!important;
+    background-color: rgba(0,0,0,0.4);
+    opacity: 0;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+
+    &.show {
+      transition: all .4s ease;
+      opacity: 1;
+      z-index: 1000;
+    }
+
+    &Block {
+      width: 100%;
+      height: auto;
+      box-shadow: 0 12px 15px rgba(0, 0, 0, .16);
+    }
+  }

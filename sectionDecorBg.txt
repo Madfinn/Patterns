@@ -1,0 +1,34 @@
+//round edges
+
+.P2pB2bAdvantages {
+    background-color: $white;
+    @extend %welcomeSectionBorder;
+    position: relative;
+
+    @include bp(l) {
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 150px;
+            width: 150%;
+            top: -25px;
+            left: -25%;
+            background: $darkBg;
+            border-radius: 70% 70% 0 0;
+            z-index: $z-P2pB2bAdvantages-pseudo;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 150px;
+            width: 150%;
+            bottom: -25px;
+            left: -25%;
+            background: $darkBg;
+            border-radius: 0 0 70% 70%;
+            z-index: $z-P2pB2bAdvantages-pseudo;
+        }
+    }

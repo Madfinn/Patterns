@@ -1,0 +1,38 @@
+  <div class="card">
+        <div class="accordion" id="accordionFilter1">
+            <div class="card-header">
+                <button type="button" class="btn btn-primary btn-lg" id="cardHeading1" data-toggle="collapse" data-target="#collapseContent1" aria-expanded="true" aria-controls="collapseContent1">
+                    Filters
+                </button>
+            </div>
+            <div class="card-body admin__cardBody collapse show" id="collapseContent1" aria-labelledby="cardHeading1" data-parent="#accordionFilter1">
+                <div class="row">
+                    <div class="col-md-12">
+                        @component('common::filters.filters', ['url' => route($selfRoute), 'filters' => $filters])
+                            <strong>Whoops!</strong> Something went wrong!
+                        @endcomponent
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body admin__cardBody">
+            <div class="row">
+                <div class="col-md-12">
+                    {{ $paginator->links() }}
+                    <table class="table table-sm admin__table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Transaction Id</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Currency</th>
+							
+list.blade.php
+
+PREVENT SCROLL UNDER POPUP
+https://benfrain.com/preventing-body-scroll-for-modals-in-ios/
+
+Scroll doesn't work in safari 
+https://www.freecodecamp.org/forum/t/scroll-doesnt-work-until-i-change-orientation-of-iphone-to-landscape-and-then-back-again/180091
+element must have position static;
+add properties:  -webkit-overflow-scrolling: touch;
+				 overflow-y: scroll;

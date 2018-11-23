@@ -1,0 +1,4 @@
+//onclick input remove placeholder
+    $('.sing_block form input').focus(function(){
+        $(this).attr('placeholder','');
+    });

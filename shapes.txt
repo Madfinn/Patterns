@@ -1,0 +1,57 @@
+//roundede edges of section
+
+.P2pB2bTopSection {
+        background-color: $c-mainBg;
+        position: relative;
+       
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 150px;
+                width: 150%;
+                bottom: -25px;
+                left: -25%;
+                background: $c-mainBg;
+                border-radius: 0 0 70% 70%;
+            }
+        }
+
+//header decor(parallel lines)
+ &__lines {
+        @include marginTop(-20);
+
+        &::after {
+            content: '';
+            display: block;
+            text-align: center;
+            margin: 0 auto 5px auto;
+            width: 1.56rem;
+            height: 2px;
+            background-color: $green;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            text-align: center;
+            margin: 0 auto 5px auto;
+            width: 1.56rem;
+            height: 2px;
+            background-color: $red;
+        }
+
+//3 dots(code on of them (spans))
+&Decor {
+
+            &Item {
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                background-color: $c-greenLogoColor;
+                transform: skew(-15deg );
+                border-radius: 25%;
+                margin-right: 5px;
+            }
+        }
+    

@@ -1,0 +1,59 @@
+//Fonts 
+1. 
+$defaultFontSize: 16;
+$defaultFontFamily: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@mixin fontSize($value) {
+  font-size: #{$value / 15}rem;
+
+  @include bp(m) {
+    font-size: #{$value / $defaultFontSize}rem;
+  }
+}
+//Media query
+2.
+/*Sizes*/
+
+$w-large-desktop: 1440px;
+$w-desktop: 992px;
+$w-tablet: 768px;
+$w-mobile: 414px;
+
+@mixin bp($point) {
+  @if $point == s {
+    @media (min-width: $w-mobile) {
+      @content;
+    }
+  } @else if $point == m {
+    @media (min-width: $w-tablet) {
+      @content;
+    }
+  } @else if $point == l {
+    @media (min-width: $w-desktop) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (min-width: $w-large-desktop) {
+      @content;
+    }
+  } @else if $point { // allows custom breakpoints
+    @media (min-width: $point) {
+      @content;
+    }
+  }
+}
+
+//Margins, paddings
+3.
+@mixin marginTBLR($valueTB, $valueLR) {
+  margin-top: ($valueTB/16) + rem;
+  margin-bottom: ($valueTB/16) + rem;
+  margin-left: ($valueLR/16) + rem;
+  margin-right: ($valueLR/16) + rem;
+  @media (min-width: 320px) and (max-width: 767px) {
+    margin-top: ($valueTB/15) + rem;
+    margin-bottom: ($valueTB/15) + rem;
+    margin-left: ($valueLR/15) + rem;
+    margin-right: ($valueLR/15) + rem;
+  }
+}
